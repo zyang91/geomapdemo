@@ -9,7 +9,6 @@
 
 
 -   Free software: MIT license
--   Documentation: https://zyang91.github.io/geomapdemo
     
 
 ## Features
