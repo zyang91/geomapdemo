@@ -27,5 +27,13 @@ def generate_random_string(length=10, upper=False, punctuations=False, digits=Fa
 
 
 def generate_lucky_number(length=1):
+    """Generates a random number of fixed length
+
+    Args:
+        length (int, optional): the length of the number. Defaults to 1.
+
+    Returns:
+        int: The generated number.
+    """    
     result_str = ''.join(random.choice(string.digits) for i in range(length))
     return int(result_str)
