@@ -4,6 +4,17 @@ import random
 import string
 
 def generate_random_string(length=10, upper=False, punctuations=False, digits=False):
+    """Generates a random string of fixed length
+
+    Args:
+        length (int, optional): The length of the string. Defaults to 10.
+        upper (bool, optional): Whether to include uppercase letters. Defaults to False.
+        punctuations (bool, optional):Whether to include punctuations. Defaults to False.
+        digits (bool, optional): Whether to include digits. Defaults to False.
+
+    Returns:
+        str: The generated string.
+    """    
     letters = string.ascii_lowercase
     if upper:
         letters += string.ascii_uppercase
