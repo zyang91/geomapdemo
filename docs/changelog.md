@@ -1,9 +1,19 @@
 # Changelog
+
+## v 0.1.0 -April 13, 2023
+
+- first available function create: choose a random number
+- second available function create: create a random text 
+- Much improvement, way to success
+
+
 ## v 0.0.5 -April 11, 2023
+
 - create two new function
 
 ## v 0.0.4 -April 11, 2023
 
+- no major update, just testing
 
 ## v0.0.3 - March 18, 2023
 
