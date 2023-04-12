@@ -14,6 +14,7 @@
 
 ## Features
 
+-   Create random numbers and random text
 -   TODO
 
 ## Credits
