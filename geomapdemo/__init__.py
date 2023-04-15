@@ -2,6 +2,6 @@
 
 __author__ = """Zhanchao Yang"""
 __email__ = 'zyang91@binghamton.edu'
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 from .geomapdemo import *
