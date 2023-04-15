@@ -9,18 +9,28 @@ import ipyleaflet
 class Map(ipyleaflet.Map):
 
     def __init__(self, center, zoom, **kwargs) -> None:
-
+        """Initializes the map
+        Args:
+            center (tuple): The center of the map.
+            zoom (int): The zoom level of the map.
+            **kwargs: Keyword arguments to be passed to the map.
+        """
         if "scroll_wheel_zoom" not in kwargs:
+            """Enables scroll wheel zoom by default"""
             kwargs["scroll_wheel_zoom"] = True
         
         
         super().__init__(center=center , zoom=zoom, **kwargs)
+
+    
     def add_search_control(self, position ="topleft", **kwargs):
         """Adds a search control to the map
         Args:
+            position (str, optional): The position of the search control. Defaults to "topleft".
             **kwargs: Keyword arguments to be passed to the search control.
         """  
         if "url" not in kwargs:
+            """Sets the default url for the search control"""
             kwargs["url"] = "https://nominatim.openstreetmap.org/search?format=json&q={s}"     
         search_control = ipyleaflet.SearchControl(position=position, **kwargs)
         self.add_control(search_control)
