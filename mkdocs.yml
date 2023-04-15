@@ -52,5 +52,7 @@ nav:
     - Example:
         - examples/intro.ipynb
         - examples/folium.ipynb
+        - examples/geomapdemo.ipynb
+        - examples/ipyleaflet.ipynb
     - API Reference:
           - geomapdemo module: geomapdemo.md
