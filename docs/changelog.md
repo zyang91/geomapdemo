@@ -1,5 +1,9 @@
 # Changelog
 
+## v 0.1.1
+- Mapping feature added
+- Allow people do basic mapping and drawing
+
 ## v 0.1.0 -April 13, 2023
 
 - first available function create: choose a random number

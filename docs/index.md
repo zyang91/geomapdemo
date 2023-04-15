@@ -15,6 +15,7 @@
 ## Features
 
 -   Create random numbers and random text
+-   Basic Mapping feature 
 -   TODO
 
 ## Credits
