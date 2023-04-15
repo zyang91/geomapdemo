@@ -51,5 +51,6 @@ nav:
     - Report Issues: https://github.com/zyang91/geomapdemo/issues
     - Example:
         - examples/intro.ipynb
+        - examples/folium.ipynb
     - API Reference:
           - geomapdemo module: geomapdemo.md
