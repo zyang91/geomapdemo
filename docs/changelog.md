@@ -1,8 +1,8 @@
 # Changelog
 
 ## v 0.1.2- April 16, 2023
--added shapfile function
--added basemap function
+- added shapfile function
+- added basemap function
 
 
 ## v 0.1.1- April 15, 2023
