@@ -8,20 +8,67 @@ import ipyleaflet
 
 class Map(ipyleaflet.Map):
 
-    def __init__(self, center, zoom, **kwargs) -> None:
+    def __init__(self, center = [40, -100], zoom = 4, **kwargs) -> None:
         """Initializes the map
         Args:
-            center (tuple): The center of the map.
-            zoom (int): The zoom level of the map.
+            center (tuple): The center of the map. e.g [lat, lon]. Defaults to [40, -100].
+            zoom (int): The zoom level of the map. Defaults to 4.
             **kwargs: Keyword arguments to be passed to the map.
         """
         if "scroll_wheel_zoom" not in kwargs:
             """Enables scroll wheel zoom by default"""
             kwargs["scroll_wheel_zoom"] = True
-        
-        
-        super().__init__(center=center , zoom=zoom, **kwargs)
 
+        if "layers_control" not in kwargs:
+            """Adds a layers control by default"""
+            kwargs["layers_control"] = True
+
+        if kwargs["layers_control"]:
+            """Adds a layers control to the map"""
+            self.add_layers_control()
+        super().__init__(center=center , zoom=zoom, **kwargs)
+        
+        if "fullscreen_control" not in kwargs:
+            """Adds a fullscreen control by default"""
+            kwargs["fullscreen_control"] = True
+        
+        if kwargs["fullscreen_control"]:
+            """Adds a fullscreen control to the map"""
+            self.add_fullscreen_control()
+
+    def add_tile_layer(self, url, name, attribution="", **kwargs):
+        """Adds a tile layer to the map
+        Args:
+            url (str): The url of the tile layer.
+            name (str): The name of the tile layer.
+            attribution (str, optional): The attribution of the tile layer. Defaults to "".
+            **kwargs: Keyword arguments to be passed to the tile layer.
+        """        
+        tile_layer = ipyleaflet.TileLayer(
+            url=url, 
+            name = name,
+            attribution = attribution,
+            **kwargs
+        )
+        self.add_layer(tile_layer)
+    
+    def add_layers_control(self, position ="topright", **kwargs):
+        """Adds a layers control to the map
+        Args:
+            position (str, optional): The position of the layers control. Defaults to "topright".
+            **kwargs: Keyword arguments to be passed to the layers control.
+        """        
+        layers_control = ipyleaflet.LayersControl(position=position, **kwargs)
+        self.add_control(layers_control)
+    
+    def add_fullscreen_control(self, position ="topright", **kwargs):
+        """Adds a fullscreen control to the map
+        Args:
+            position (str, optional): The position of the fullscreen control. Defaults to "topright".
+            **kwargs: Keyword arguments to be passed to the fullscreen control.
+        """        
+        fullscreen_control = ipyleaflet.FullScreenControl(position=position, **kwargs)
+        self.add_control(fullscreen_control)
     
     def add_search_control(self, position ="topleft", **kwargs):
         """Adds a search control to the map
