@@ -233,12 +233,17 @@ class Map(ipyleaflet.Map):
     def add_markers(self, center, draggable = False, **kwargs):
         """Adds markers to the map
         Args:
-            center (tuple): The center of the markers.
+            center (tuple| list): The center of the markers.
             draggable (bool, optional): Whether the markers are draggable. Defaults to False.
             **kwargs: Keyword arguments to be passed to the markers.
-        """        
-        marker = ipyleaflet.Marker(location=center, draggable= draggable, **kwargs)
-        self.add_layer(marker)
+        """ 
+        if isinstance(center, list):
+            center = tuple(center)
+        if isinstance(center, tuple):
+            marker = ipyleaflet.Marker(location=center, draggable= draggable, **kwargs)
+            self.add_layer(marker)
+        else:
+            raise TypeError("The center must be a tuple or a list")
 
 
 
