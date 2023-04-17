@@ -1,5 +1,14 @@
 # Changelog
 
+## v 0.1.4 -April 16, 2023
+- added marker function
+
+
+## v 0.1.3 -April 16, 2023
+- added more function
+- fix bugs
+
+
 ## v 0.1.2- April 16, 2023
 - added shapfile function
 - added basemap function
