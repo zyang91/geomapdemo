@@ -8,8 +8,8 @@ Answer: Yes. The package is still under development. More features such as addin
 
 ## How to report an issue or made feature request?
 Answer: Reporting issues from github is now available. Right now, the feature request will not be processing after the basic feature development.
-Please go to https://github.com/zyang91/geomapdemo/issues to leave any comments 
-Discussion board are also available at https://github.com/zyang91/geomapdemo/discussions
+Please go to [https://github.com/zyang91/geomapdemo/issues](https://github.com/zyang91/geomapdemo/issues) to leave any comments 
+Discussion board are also available at [https://github.com/zyang91/geomapdemo/discussions](https://github.com/zyang91/geomapdemo/discussions)
 
 ## More questions?
 Feel free to discuss in the discussion section or send me an email at zyang91@binghamton.edu
