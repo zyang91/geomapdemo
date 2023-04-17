@@ -15,7 +15,8 @@
 ## Features
 
 -   Create random numbers and random text
--   Basic Mapping feature 
+-   Basic Mapping feature
+-   Added layers and basemap to interactive map.
 -   TODO
 
 ## Credits
