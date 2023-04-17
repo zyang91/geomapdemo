@@ -43,6 +43,21 @@ class Map(ipyleaflet.Map):
         if kwargs["search_control"]:
             """Adds a search control to the map"""
             self.add_search_control()
+        
+        if "scale_control" not in kwargs:
+            """Adds a scale control by default"""
+            kwargs["scale_control"] = True
+        
+        if kwargs["scale_control"]:
+            """Adds a scale control to the map"""
+            self.add_scale_control()
+        
+        if 'height' in kwargs:
+            """Sets the height of the map"""
+            self.layout.height = kwargs['height']
+        else:
+            """Sets the default height of the map"""
+            kwargs['height'] = '600px'
 
 
     def add_basemap(self, basemap, **kwargs):
@@ -164,6 +179,29 @@ class Map(ipyleaflet.Map):
             }
         self.add_control(draw_control)
     
+    def add_measure_control(self, position = 'bottomleft',  primary_length_unit = 'kilometers', **kwargs):
+        """Adds a measure control to the map
+        Args:
+            position (str, optional): The position of the measure control. Defaults to 'bottomleft'.
+            primary_length_unit (str, optional): The primary length unit of the measure control. Defaults to 'kilometers'.
+            **kwargs: Keyword arguments to be passed to the measure control.
+        """  
+        measure_control = ipyleaflet.MeasureControl(
+            position = position, 
+            primary_length_unit = primary_length_unit,
+            **kwargs
+            )
+        self.add_control(measure_control)
+    
+    def add_scale_control(self, position = 'bottomleft', **kwargs):
+        """Adds a scale control to the map
+        Args:
+            position (str, optional): The position of the scale control. Defaults to 'bottomleft'.
+            **kwargs: Keyword arguments to be passed to the scale control.
+        """  
+        scale_control = ipyleaflet.ScaleControl(position = position, **kwargs)
+        self.add_control(scale_control)
+
     def add_geojson(self, data, name ='GeoJson', **kwargs):
         """Adds a geojson to the map
         Args:
