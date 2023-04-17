@@ -229,6 +229,16 @@ class Map(ipyleaflet.Map):
         gdf = gpd.read_file(path)
         geojson = gdf.__geo_interface__
         self.add_geojson(geojson, name=name, **kwargs)
+    
+    def add_markers(self, center, draggable = False, **kwargs):
+        """Adds markers to the map
+        Args:
+            center (tuple): The center of the markers.
+            draggable (bool, optional): Whether the markers are draggable. Defaults to False.
+            **kwargs: Keyword arguments to be passed to the markers.
+        """        
+        marker = ipyleaflet.Marker(location=center, draggable= draggable, **kwargs)
+        self.add_layer(marker)
 
 
 
