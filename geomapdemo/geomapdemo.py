@@ -245,7 +245,39 @@ class Map(ipyleaflet.Map):
         else:
             raise TypeError("The center must be a tuple or a list")
 
+    def add_raster(self, url, name ='Raster', fit_bounds= True, **kwargs):
+        """Adds a raster to the map
+        Args:
+            url (str): The url of the raster.
+            name (str, optional): The name of the raster. Defaults to 'Raster'.
+            fit_bounds (bool, optional): Whether to fit the bounds of the raster. Defaults to True.
+            **kwargs: Keyword arguments to be passed to the raster.
+        """ 
+        import httpx
+        titiler_endpoint = "https://titiler.xyz"
+        r = httpx.get(
+            f"{titiler_endpoint}/cog/info",
+            params = {
+                "url": url,
+            }
+        ).json()
 
+        bounds = r["bounds"]
+
+        r = httpx.get(
+            f"{titiler_endpoint}/cog/tilejson.json",
+            params = {
+                "url": url,
+            }
+        ).json()
+
+        tile = r['tiles'][0]
+
+        self.add_tile_layer(url=tile, name=name, **kwargs)
+
+        if fit_bounds:
+            bbox = [[bounds[1], bounds[0]], [bounds[3], bounds[2]]]
+            self.fit_bounds(bbox)
 
 
 
