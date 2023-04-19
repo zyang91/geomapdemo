@@ -4,6 +4,7 @@
 [![image](https://img.shields.io/pypi/v/geomapdemo.svg)](https://pypi.python.org/pypi/geomapdemo)
 [![image](https://img.shields.io/conda/vn/conda-forge/geomapdemo.svg)](https://anaconda.org/conda-forge/geomapdemo)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/zyang91/geomapdemo/HEAD)
+[![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://zyang91.github.io/geomapdemo-jupyter-lite/)
 
 **A python package for interactive mapping, testing.**
 
