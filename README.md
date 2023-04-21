@@ -1,6 +1,7 @@
 # geomapdemo
 
 [![Software License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Downloads](https://static.pepy.tech/badge/geomapdemo)](https://pepy.tech/project/geomapdemo)
 [![image](https://img.shields.io/pypi/v/geomapdemo.svg)](https://pypi.python.org/pypi/geomapdemo)
 [![image](https://img.shields.io/conda/vn/conda-forge/geomapdemo.svg)](https://anaconda.org/conda-forge/geomapdemo)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/zyang91/geomapdemo/HEAD)
