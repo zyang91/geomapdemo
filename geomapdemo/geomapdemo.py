@@ -279,6 +279,21 @@ class Map(ipyleaflet.Map):
             bbox = [[bounds[1], bounds[0]], [bounds[3], bounds[2]]]
             self.fit_bounds(bbox)
 
+    def add_local_raster(self, filepath, **kwargs):
+        """Adds a local raster to the map
+        Args:
+            filepath (str): The path to the raster.
+            name (str, optional): The name of the raster. Defaults to 'Raster'.
+            **kwargs: Keyword arguments to be passed to the raster.
+        """ 
+        try:
+            from localtileserver import get_leaflet_tile_layer, TileClient
+            client = TileClient(filepath)
+            tile_layer = get_leaflet_tile_layer(client)
+            self.add_layer(tile_layer)
+        except:
+            raise ImportError("Please install localtileserver")
+
 
 
 def generate_random_string(length=10, upper=False, punctuations=False, digits=False):
