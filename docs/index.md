@@ -22,7 +22,7 @@
 -   Create random numbers and random text
 -   Basic Mapping feature (control function)
 -   Added layers and basemap to interactive map
--   Added httpx raster layer function
+-   Added httpx and local raster layer function
 
 ## Credits
 
