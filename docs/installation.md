@@ -11,7 +11,7 @@ This is the preferred method to install geomapdemo, as it will always install th
 
 If you don't have [pip](https://pip.pypa.io) installed, this [Python installation guide](http://docs.python-guide.org/en/latest/starting/installation/) can guide you through the process.
 
-## Upgrade geemap
+## Upgrade geomapdemo
 
 If you have installed **geomapdemo** before and want to upgrade to the latest version, you can run the following command in your terminal:
 
