@@ -283,7 +283,6 @@ class Map(ipyleaflet.Map):
         """Adds a local raster to the map
         Args:
             filepath (str): The path to the raster.
-            name (str, optional): The name of the raster. Defaults to 'Raster'.
             **kwargs: Keyword arguments to be passed to the raster.
         """ 
         try:
