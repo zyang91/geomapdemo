@@ -9,10 +9,10 @@
 ![image](https://github.com/zyang91/geomapdemo/workflows/docs/badge.svg)
 ![image](https://github.com/zyang91/geomapdemo/workflows/build/badge.svg)
 
-**A python package for interactive mapping, testing.**
+**A python package for interactive mapping.**
 
 
--   Free software: MIT license
+- Free software: MIT license
 - Documentation: https://zyang91.github.io/geomapdemo
     
 
@@ -20,7 +20,7 @@
 
 -   Create random numbers and random text
 -   Basic Mapping and drawing
--   TODO
+-   Vector and raster layer function available
 
 ## Credits
 
