@@ -14,22 +14,28 @@
 
 ## v 0.1.3 -April 16, 2023
 
-**new features**
+**New features**
 
 - added more function
 - fix bugs
 
 ## v 0.1.2- April 16, 2023
 
+**New features**
+
 - added shapfile function
 - added basemap function
 
 ## v 0.1.1- April 15, 2023
 
+**New features**
+
 - Mapping feature added
 - Allow people do basic mapping and drawing
 
 ## v 0.1.0 -April 13, 2023
+
+**New features**
 
 - first available function create: choose a random number
 - second available function create: create a random text
