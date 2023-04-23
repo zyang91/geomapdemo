@@ -17,3 +17,16 @@ Map.add_basemap('Esri.OceanBasemap')
 Map.add_basemap('Esri.NatGeoWorldMap')
 ```
 
+To generate random string
+
+```python
+geomapdemo.generate_random_string()
+geomapdemo.generate_random_string(9, upper=True, digits=True)
+```
+
+To generate random number
+
+```python
+geomapdemo.generate_lucky_number()
+geomapdemo.generate_lucky_number(10)
+```
