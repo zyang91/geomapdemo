@@ -6,9 +6,19 @@ To create an ipyleaflet-based interactive map:
 
 ```python
 import geomapdemo
-Map = geomapdemo.Map(center=[40,-100], zoom=4)
-Map
+m = geomapdemo.Map(center=[40,-100], zoom= 4)
+m
 ```
+
+
+To create a folium-based interactive map:
+
+```python
+import geomapdemo.foliumap as geomapdemo
+m = geomapdemo.Map(center= [40,-100], zoom = 4)
+m
+```
+
 
 To add additional basemaps to the Map:
 

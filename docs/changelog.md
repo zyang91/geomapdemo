@@ -1,5 +1,13 @@
 # Changelog
 
+## v.2.0 -April 24, 2023
+
+**New Section**
+
+- added foliumap section
+- updated ipyleaflet section
+- More coming soon
+
 ## v0.1.5 -April 23, 2023
 
 **New features**

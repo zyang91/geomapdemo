@@ -21,8 +21,10 @@
 
 -   Create random numbers and random text
 -   Basic Mapping feature (control function)
+-   Ipyleaflet based interactive map function
 -   Added layers and basemap to interactive map
 -   Added httpx and local raster layer function
+-   Folium based interactive map function
 
 ## Credits
 
