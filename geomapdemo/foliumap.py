@@ -160,21 +160,6 @@ class Map(folium.Map):
         if "fill_colors" in kwargs:
             fill_colors = kwargs["fill_colors"]
 
-            def random_color(feature):
-                style_dict["fillColor"] = random.choice(fill_colors)
-                return style_dict
-
-            kwargs["style_function"] = random_color
-            kwargs.pop("fill_colors")
-
-        if "weight" not in style_dict:
-            style_dict["weight"] = 2
-
-        if "highlight_function" not in kwargs:
-            kwargs["highlight_function"] = lambda feat: {
-                "weight": style_dict["weight"] + 2,
-                "fillOpacity": 0,
-            }
 
         geojson = folium.GeoJson(
             data=data, name=layer_name, **kwargs
