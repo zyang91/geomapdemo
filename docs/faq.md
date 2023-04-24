@@ -11,5 +11,8 @@ Answer: Reporting issues from github is now available. Right now, the feature re
 Please go to [https://github.com/zyang91/geomapdemo/issues](https://github.com/zyang91/geomapdemo/issues) to leave any comments. <br>
 Discussion board are also available at [https://github.com/zyang91/geomapdemo/discussions](https://github.com/zyang91/geomapdemo/discussions)
 
+## New Questions?
+Feel free to ask me!
+
 ## More questions?
 Feel free to discuss in the discussion section or send me an email at zyang91@binghamton.edu
