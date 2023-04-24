@@ -31,4 +31,56 @@ class Map(folium.Map):
             **kwargs)
         self.add_child(tile_layer)
     
+    def add_marker(self, location, popup, **kwargs):
+        """Adds a marker to the map
+        Args:
+            location (list): The location of the marker.
+            popup (str): The popup text of the marker.
+            **kwargs: Keyword arguments to be passed to the marker.
+        """        
+        marker= folium.Marker(
+            location=location, 
+            popup=popup, 
+            **kwargs)
+        self.add_child(marker)
+    
+    def add_circle_marker(self, location, radius= 10, popup = "", fill= True, **kwargs):
+        """Adds a circle marker to the map
+        Args:
+            location (list): The location of the marker.
+            radius (int): The radius of the circle marker.Defaults to 10.
+            popup (str): The popup text of the marker.
+            fill (bool): Whether to fill the circle marker. Defaults to False.
+            **kwargs: Keyword arguments to be passed to the marker.
+        """        
+        marker= folium.CircleMarker(
+            location=location, 
+            radius=radius, 
+            popup=popup,
+            fill=fill, 
+            **kwargs)
+        self.add_child(marker)
 
+    def add_circle(self, location, radius = 10, popup ="", fill = False, **kwargs):
+        """Adds a circle to the map
+        Args:
+            location (list): The location of the circle.
+            radius (int): The radius of the circle marker.Defaults to 10.
+            popup (str): The popup text of the marker.
+            fill (bool): Whether to fill the circle marker. Defaults to False.
+            **kwargs: Keyword arguments to be passed to the marker.
+        """
+        marker= folium.Circle(
+            location=location,
+            radius=radius,
+            popup=popup,
+            fill=fill,
+            **kwargs)
+        self.add_child(marker)
+    
+    def click_for_marker(self, popup="click Point"):
+        """Adds a click listener to the map to add markers.
+        Args:
+            popup (str): The popup text of the marker. Defaults to "click Point".
+        """        
+        self.add_child(folium.ClickForMarker(popup=popup))
