@@ -97,3 +97,13 @@ class Map(folium.Map):
             popup=popup,
             **kwargs)
         self.add_child(polyline)
+    
+    def set_center(self, lat, lon, zoom=10):
+        """Sets the center of the map
+        Args:
+            lat (float): The latitude of the center.
+            lon (float): The longitude of the center.
+            zoom (int): The zoom level. Defaults to 10.
+        """        
+        self.fit_bounds([[lat, lon], [lat, lon]], max_zoom=zoom)
+    
