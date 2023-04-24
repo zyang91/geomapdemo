@@ -107,3 +107,77 @@ class Map(folium.Map):
         """        
         self.fit_bounds([[lat, lon], [lat, lon]], max_zoom=zoom)
     
+    def add_geojson(
+        self,
+        in_geojson,
+        layer_name="Untitled",
+        encoding="utf-8",
+        **kwargs,
+    ):
+        """Adds a GeoJSON file to the map.
+
+        Args:
+            in_geojson (str): The input file path to the GeoJSON.
+            layer_name (str, optional): The layer name to be used. Defaults to "Untitled".
+            encoding (str, optional): The encoding of the GeoJSON file. Defaults to "utf-8".
+
+        Raises:
+            FileNotFoundError: The provided GeoJSON file could not be found.
+        """
+        import json
+        import requests
+        import random
+
+        if in_geojson.startswith("http"):
+            response = requests.get(in_geojson)
+            data = response.json()
+        else:
+            try:
+                with open(in_geojson, encoding=encoding) as f:
+                    data = json.load(f)
+            except FileNotFoundError:
+                raise FileNotFoundError(
+                    "The provided GeoJSON file could not be found."
+                )
+
+        # interchangeable parameters between ipyleaflet and folium.
+        style_dict = {}
+        if "style_function" not in kwargs:
+            if "style" not in kwargs:
+                style_dict = {
+                    # "stroke": True,
+                    "color": "#3388ff",
+                    "weight": 2,
+                    "opacity": 1,
+                    #"fill": True,
+                    #"fillColor": "#ffffff",
+                    "fillOpacity": 0,
+                    # "dashArray": "9"
+                    # "clickable": True,
+                }
+                kwargs["style_function"] = lambda x: style_dict
+
+        if "fill_colors" in kwargs:
+            fill_colors = kwargs["fill_colors"]
+
+            def random_color(feature):
+                style_dict["fillColor"] = random.choice(fill_colors)
+                return style_dict
+
+            kwargs["style_function"] = random_color
+            kwargs.pop("fill_colors")
+
+        if "weight" not in style_dict:
+            style_dict["weight"] = 2
+
+        if "highlight_function" not in kwargs:
+            kwargs["highlight_function"] = lambda feat: {
+                "weight": style_dict["weight"] + 2,
+                "fillOpacity": 0,
+            }
+
+        geojson = folium.GeoJson(
+            data=data, name=layer_name, **kwargs
+        )
+        self.add_child(geojson)
+        
