@@ -289,10 +289,9 @@ class Map(ipyleaflet.Map):
             from localtileserver import get_leaflet_tile_layer, TileClient
             client = TileClient(filepath)
             tile_layer = get_leaflet_tile_layer(client)
-            self.add_layer(tile_layer)
+            self.add_layer(tile_layer, **kwargs)
         except:
             raise ImportError("Please install localtileserver")
-
 
 
 def generate_random_string(length=10, upper=False, punctuations=False, digits=False):

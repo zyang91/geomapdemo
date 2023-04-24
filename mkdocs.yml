@@ -57,3 +57,4 @@ nav:
         - examples/ipyleaflet.ipynb
     - API Reference:
           - geomapdemo module: geomapdemo.md
+          - foliumap module: foliumap.md
