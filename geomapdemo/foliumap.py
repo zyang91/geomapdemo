@@ -84,3 +84,16 @@ class Map(folium.Map):
             popup (str): The popup text of the marker. Defaults to "click Point".
         """        
         self.add_child(folium.ClickForMarker(popup=popup))
+    
+    def add_polylines(self, locations, popup="", **kwargs):
+        """Adds a polyline to the map
+        Args:
+            locations (list): The locations of the polyline.
+            popup (str): The popup text of the polyline.
+            **kwargs: Keyword arguments to be passed to the polyline.
+        """        
+        polyline= folium.PolyLine(
+            locations=locations,
+            popup=popup,
+            **kwargs)
+        self.add_child(polyline)
