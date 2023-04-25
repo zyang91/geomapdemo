@@ -97,6 +97,19 @@ class Map(folium.Map):
             popup=popup,
             **kwargs)
         self.add_child(polyline)
+
+    def add_polygon(self, locations, popup="", **kwargs):
+        """Adds a polygon to the map
+        Args:
+            locations (list): The locations of the polygon.
+            popup (str): The popup text of the polygon.
+            **kwargs: Keyword arguments to be passed to the polygon.
+        """        
+        polygon= folium.Polygon(
+            locations=locations,
+            popup=popup,
+            **kwargs)
+        self.add_child(polygon)
     
     def set_center(self, lat, lon, zoom=10):
         """Sets the center of the map
