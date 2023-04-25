@@ -126,7 +126,6 @@ class Map(folium.Map):
         """
         import json
         import requests
-        import random
 
         if in_geojson.startswith("http"):
             response = requests.get(in_geojson)
@@ -156,9 +155,9 @@ class Map(folium.Map):
                     # "clickable": True,
                 }
                 kwargs["style_function"] = lambda x: style_dict
-
-        if "fill_colors" in kwargs:
-            fill_colors = kwargs["fill_colors"]
+            else:
+                style_dict = kwargs["style"]
+                kwargs["style_function"] = lambda x: style_dict
 
 
         geojson = folium.GeoJson(
