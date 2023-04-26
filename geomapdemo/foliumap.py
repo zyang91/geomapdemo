@@ -177,4 +177,18 @@ class Map(folium.Map):
             data=data, name=layer_name, **kwargs
         )
         self.add_child(geojson)
+    
+    def add_shp(self, path, name="Shapefile", **kwargs):
+
+        """Adds a shapefile to the map
+        Args:
+            path (str): The path to the shapefile.
+            name (str, optional): The name of the shapefile. Defaults to 'Shapefile'.
+            **kwargs: Keyword arguments to be passed to the shapefile.
+        """        
+        import geopandas as gpd
+        gdf = gpd.read_file(path)
+        geojson = gdf.__geo_interface__
+        json= folium.GeoJson(data=geojson, name=name, **kwargs)
+        self.add_child(json)
         
