@@ -25,6 +25,4 @@
 -   Ipyleaflet based interactive map function
 -   Folium based interactive map function
 
-## Credits
 
-This package was created with [Cookiecutter](https://github.com/cookiecutter/cookiecutter) and the [giswqs/pypackage](https://github.com/giswqs/pypackage) project template.
