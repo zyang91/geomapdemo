@@ -204,19 +204,16 @@ class Map(folium.Map):
         """        
         import geopandas as gpd
         import pandas as pd
-        gdf = gpd.read_file(json)
         df = pd.read_csv(csv)
 
         if "fill_opacity" not in kwargs:
-             """Sets the default fill opacity for the choropleth map"""
-             kwargs["fill_opacity"] = 0.7
+            kwargs["fill_opacity"] = 0.7
         
         if "line_opacity" not in kwargs:
-            """Sets the default line opacity for the choropleth map"""
             kwargs["line_opacity"] = 0.2
 
         choropleth = folium.Choropleth(
-            geo_data=gdf,
+            geo_data=json,
             name=name,
             data=df,
             columns=columns,
