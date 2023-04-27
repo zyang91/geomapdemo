@@ -192,3 +192,37 @@ class Map(folium.Map):
         json= folium.GeoJson(data=geojson, name=name, **kwargs)
         self.add_child(json)
         
+    def add_choropleth_map(self, json, csv, columns,key_on,name="choropleth", fill_color='YlGn', legend_name='', **kwargs):
+        """Adds a choropleth map to the map
+        Args:
+            json (str): The path to the json file.
+            csv (str): The path to the csv file.
+            name (str, optional): The name of the choropleth map. Defaults to 'choropleth'.
+            fill_color (str, optional): The color scale of the choropleth map. Defaults to 'Ylgn'.
+            legend_name (str, optional): The name of the legend. Defaults to ''.
+            **kwargs: Keyword arguments to be passed to the choropleth map.
+        """        
+        import geopandas as gpd
+        import pandas as pd
+        gdf = gpd.read_file(json)
+        df = pd.read_csv(csv)
+
+        if "fill_opacity" not in kwargs:
+             """Sets the default fill opacity for the choropleth map"""
+             kwargs["fill_opacity"] = 0.7
+        
+        if "line_opacity" not in kwargs:
+            """Sets the default line opacity for the choropleth map"""
+            kwargs["line_opacity"] = 0.2
+
+        choropleth = folium.Choropleth(
+            geo_data=gdf,
+            name=name,
+            data=df,
+            columns=columns,
+            key_on= key_on,
+            fill_color=fill_color,
+            legend_name=legend_name,
+            **kwargs
+        )
+        self.add_child(choropleth)
