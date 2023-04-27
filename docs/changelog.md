@@ -1,6 +1,26 @@
 # Changelog
 
-## v.2.0 -April 24, 2023
+
+## v0.2.2 -April 26, 2023
+
+**New features**
+
+- Choropleth map function within the foliumap module
+- Layer control function within the foliumap module
+- Check at doc pages and new examples
+
+
+
+## v0.2.1 -April 25, 2023
+
+**New features**
+
+Please check the documentation at the API reference in foliumap section!
+
+- polygon fucntion
+- geojson function
+
+## v0.2.0 -April 24, 2023
 
 **New Section**
 
