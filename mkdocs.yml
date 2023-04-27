@@ -58,6 +58,7 @@ nav:
         - examples/layer_control.ipynb
         - examples/test-folium.ipynb
         - examples/add_geojson.ipynb
+        - examples/add_choropleth_map.ipynb
     - API Reference:
           - geomapdemo module: geomapdemo.md
           - foliumap module: foliumap.md
