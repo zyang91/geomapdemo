@@ -198,7 +198,7 @@ class Map(folium.Map):
             json (str): The path to the json file.
             csv (str): The path to the csv file.
             name (str, optional): The name of the choropleth map. Defaults to 'choropleth'.
-            fill_color (str, optional): The color scale of the choropleth map. Defaults to 'Ylgn'.
+            fill_color (str, optional): The color scale of the choropleth map. Defaults to 'YlGn'.
             legend_name (str, optional): The name of the legend. Defaults to ''.
             **kwargs: Keyword arguments to be passed to the choropleth map.
         """        
@@ -223,3 +223,9 @@ class Map(folium.Map):
             **kwargs
         )
         self.add_child(choropleth)
+        self.add_child(folium.LayerControl())
+    
+    def add_layer_control(self):
+        """Adds a layer control to the map
+        """        
+        self.add_child(folium.LayerControl())
