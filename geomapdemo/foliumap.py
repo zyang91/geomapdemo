@@ -229,3 +229,11 @@ class Map(folium.Map):
         """Adds a layer control to the map
         """        
         self.add_child(folium.LayerControl())
+    
+    def add_layer(self, layer):
+        """Adds a layer to the map
+        Args:
+            layer (TileLayer): A TileLayer instance.
+        """       
+        layer.add_to(self)
+        
