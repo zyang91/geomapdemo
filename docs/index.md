@@ -11,7 +11,7 @@
 [![Github Badge](https://img.shields.io/badge/Github-Repo-yellow)](https://github.com/zyang91/geomapdemo)
 
 
-**A python package for interactive mapping, testing.**
+**A python package for interactive mapping.**
 
 
 -   Free software: MIT license
