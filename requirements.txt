@@ -3,3 +3,6 @@ ipyleaflet
 geopandas
 httpx
 seaborn
+pandas
+numpy
+matplotlib
