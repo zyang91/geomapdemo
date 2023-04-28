@@ -6,6 +6,7 @@ import ipyleaflet
 
 
 
+
 class Map(ipyleaflet.Map):
 
     def __init__(self, center = [40, -100], zoom = 4, **kwargs) -> None:
