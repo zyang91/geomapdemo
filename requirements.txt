@@ -1,6 +1,5 @@
 folium
 ipyleaflet
-leafmap
 geopandas
 httpx
 seaborn
