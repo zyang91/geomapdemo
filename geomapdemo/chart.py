@@ -12,3 +12,4 @@ def set_theme(style='darkgrid', **kwargs):
         style (str): darkgrid, darkgrid, dark, white, ticks
         kwargs: Additional parameters to control the aesthetics of the grid.'''
     sns.set_theme(style=style, **kwargs)
+
