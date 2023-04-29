@@ -15,16 +15,17 @@ def set_default_theme(style='darkgrid', **kwargs):
         kwargs: Additional parameters to control the aesthetics of the grid.'''
     sns.set_theme(style=style, **kwargs)
 
-def scatter_plot(data, x, y, **kwargs):
+def scatter_plot(data, x, y, hue= None, **kwargs):
     '''Plot data and regression model fits across a FacetGrid.
     Args:
         data (DataFrame): CSV file path or DataFrame object.
         x, y (str): Variables that specify positions on the x and y axes.
+        hue (str): Variable in data to map plot aspects to different colors.
         kwargs: Additional keyword arguments are passed to the function used to draw the plot on the joint Axes, superseding items in the joint_kws dictionary.
     '''
     if isinstance(data, str):
         df = pd.read_csv(data)
     else:
         df = data
-    sns.catplot(data=df, x=x, y=y, **kwargs)
+    sns.catplot(data=df, x=x, y=y, hue=hue, **kwargs)
 
