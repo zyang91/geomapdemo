@@ -1,10 +1,4 @@
-'''Chart Module'''
 '''Chart module for creating interactive chart.'''
-
-
-'''Since many of the GIS spatial analysis involve the use of charts,
- I recommend the chart section in geomapdemo package, 
- which based on the seaborn to make people convenient to generate the charts.'''
  
 import numpy as np
 import pandas as pd
