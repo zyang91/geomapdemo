@@ -12,7 +12,8 @@ Please go to [https://github.com/zyang91/geomapdemo/issues](https://github.com/z
 Discussion board are also available at [https://github.com/zyang91/geomapdemo/discussions](https://github.com/zyang91/geomapdemo/discussions)
 
 ## What module are currently available?
-Answer: Currently, there are three module available. Main one is geomapdemo module, which meanly based on ipyleaflet interactive map making. Backup one is foliumap module, which mainly based on folium interactive map making. The third one is chart module which is used to make interactive chart for GIS Analysis
+Answer: Currently, there are three module available. Main one is geomapdemo module, which meanly based on ipyleaflet interactive map making. Backup one is foliumap module, which mainly based on folium interactive map making. The third one is chart module which is used to make interactive chart for GIS Analysis. All three module are still under devlopment.
+
 The different between two module, please check the API reference at [documentation](https://zyang91.github.io/geomapdemo) website.
 
 ## Why the interactive map does not show up?
