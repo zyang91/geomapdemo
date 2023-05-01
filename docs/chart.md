@@ -1,3 +1,3 @@
-# foliumap module
+# Chart module
 
 ::: geomapdemo.chart
