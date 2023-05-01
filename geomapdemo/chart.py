@@ -1,15 +1,15 @@
 '''Chart Module'''
 '''Chart module for creating interactive chart.'''
 
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 '''Since many of the GIS spatial analysis involve the use of charts,
  I recommend the chart section in geomapdemo package, 
  which based on the seaborn to make people convenient to generate the charts.'''
-
+ 
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 def set_default_theme(style='darkgrid', **kwargs):
     '''Set the aesthetic style of the plots.
