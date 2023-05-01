@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.3.1 -April 29
+
+**New Features**
+
+- added scatter ploy function
+- added violin plot function
+
+## v0.3.0 -April 27, 2023
+
+**New Module**
+- Seaborn chart module created
+- More update coming soon
 
 ## v0.2.2 -April 26, 2023
 
