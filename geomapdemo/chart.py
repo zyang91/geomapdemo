@@ -82,3 +82,16 @@ def box_plot(data, x, y, hue= None, **kwargs):
         df = data
     sns.boxplot(data=df, x=x, y=y, hue=hue, **kwargs)
 
+def single_box_plot(data, variable, **kwargs):
+    '''Plot data and regression model fits across a FacetGrid.
+    Aegs:
+        data (DataFrame): CSV file path or DataFrame object.
+        variable (str): Variables that specify positions on the x and y axes.
+        kwargs: Additional keyword arguments are passed to the function used to draw the plot on the joint Axes, superseding items in the joint_kws dictionary.
+    '''
+    if isinstance(data, str):
+        df = pd.read_csv(data)
+    else:
+        df = data
+    sns.boxplot(data=df,x=df[variable], **kwargs)
+
