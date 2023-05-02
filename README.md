@@ -24,6 +24,7 @@
 -   Vector and raster layer function available
 -   Ipyleaflet based interactive map function
 -   Folium based interactive map function
+-   Chart module for interactive chart making
 
 
 ## Supported Python Version
@@ -33,7 +34,3 @@
 - Python 3.9
 - Python 3.10
 - Python 3.11
-
-
-
-
