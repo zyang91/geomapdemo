@@ -3,6 +3,7 @@
 import random
 import string
 import ipyleaflet
+import ipywidgets as widgets
 
 
 
@@ -293,6 +294,19 @@ class Map(ipyleaflet.Map):
             self.add_layer(tile_layer, **kwargs)
         except:
             raise ImportError("Please install localtileserver")
+    
+    def add_opacity_control(self, value, min, max, **kwargs):
+        """Adds an opacity control to the map
+        Args:
+            value (float): The initial value of the opacity control.
+            min (float): The minimum value of the opacity control.
+            max (float): The maximum value of the opacity control.
+            **kwargs: Keyword arguments to be passed to the opacity control.
+        """ 
+        slider = widgets.FloatSlider(value=value, min=min, max=max, **kwargs)
+        widgets.jslink((slider, 'value'), (self.layers[-1], 'opacity'))
+        control = ipyleaflet.WidgetControl(widget=slider, position='bottomright')
+        self.add_control(control)
 
 
 def generate_random_string(length=10, upper=False, punctuations=False, digits=False):

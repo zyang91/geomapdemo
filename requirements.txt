@@ -6,3 +6,4 @@ seaborn
 pandas
 numpy
 matplotlib
+ipywidgets
