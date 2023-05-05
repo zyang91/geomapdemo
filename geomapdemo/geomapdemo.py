@@ -312,21 +312,21 @@ class Map(ipyleaflet.Map):
         """Adds custom HTML to the map
         Args:
             html (str): The HTML string.
-            position (str, optional): The position of the HTML. Defaults to 'topright'.
+            position (str, optional): The position of the HTML. Defaults to 'bottomright'.
         """ 
         from ipyleaflet import WidgetControl
         control = WidgetControl(widget=widgets.HTML(html), position=position)
         self.add_control(control)
     
-    def add_logo(self, url):
+    def add_logo(self, url, position='bottomright'):
         """Adds a logo to the map
         Args:
             url (str): The url of the logo.
-            **kwargs: Keyword arguments to be passed to the logo.
+            position (str, optional): The position of the logo. Defaults to 'bottomright'.
         """ 
         from ipyleaflet import WidgetControl
         logo = widgets.HTML(f'<img src="{url}" alt="Logo" width="100" height="100">')
-        control = WidgetControl(widget=logo, position='bottomright')
+        control = WidgetControl(widget=logo, position=position)
         self.add_control(control)
 
 
