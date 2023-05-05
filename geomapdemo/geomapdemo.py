@@ -318,14 +318,16 @@ class Map(ipyleaflet.Map):
         control = WidgetControl(widget=widgets.HTML(html), position=position)
         self.add_control(control)
     
-    def add_logo(self, url, position='bottomright'):
+    def add_logo(self, url, width = 100, height=100,  position='bottomright'):
         """Adds a logo to the map
         Args:
             url (str): The url of the logo.
+            width (int, optional): The width of the logo. Defaults to 100.
+            height (int, optional): The height of the logo. Defaults to 100.
             position (str, optional): The position of the logo. Defaults to 'bottomright'.
         """ 
         from ipyleaflet import WidgetControl
-        logo = widgets.HTML(f'<img src="{url}" alt="Logo" width="100" height="100">')
+        logo = widgets.HTML(f'<img src="{url}" alt="Logo" width="{width}" height="{height}">')
         control = WidgetControl(widget=logo, position=position)
         self.add_control(control)
 
