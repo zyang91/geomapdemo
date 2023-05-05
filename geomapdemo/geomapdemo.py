@@ -307,6 +307,27 @@ class Map(ipyleaflet.Map):
         widgets.jslink((slider, 'value'), (self.layers[-1], 'opacity'))
         control = ipyleaflet.WidgetControl(widget=slider, position='bottomright')
         self.add_control(control)
+    
+    def add_custom_html(self, html, position='bottomright'):
+        """Adds custom HTML to the map
+        Args:
+            html (str): The HTML string.
+            position (str, optional): The position of the HTML. Defaults to 'topright'.
+        """ 
+        from ipyleaflet import WidgetControl
+        control = WidgetControl(widget=widgets.HTML(html), position=position)
+        self.add_control(control)
+    
+    def add_logo(self, url):
+        """Adds a logo to the map
+        Args:
+            url (str): The url of the logo.
+            **kwargs: Keyword arguments to be passed to the logo.
+        """ 
+        from ipyleaflet import WidgetControl
+        logo = widgets.HTML(f'<img src="{url}" alt="Logo" width="100" height="100">')
+        control = WidgetControl(widget=logo, position='bottomright')
+        self.add_control(control)
 
 
 def generate_random_string(length=10, upper=False, punctuations=False, digits=False):
