@@ -118,10 +118,10 @@ class Map(ipyleaflet.Map):
         layers_control = ipyleaflet.LayersControl(position=position, **kwargs)
         self.add_control(layers_control)
     
-    def add_fullscreen_control(self, position ="topright", **kwargs):
+    def add_fullscreen_control(self, position ="topleft", **kwargs):
         """Adds a fullscreen control to the map
         Args:
-            position (str, optional): The position of the fullscreen control. Defaults to "topright".
+            position (str, optional): The position of the fullscreen control. Defaults to "topleft".
             **kwargs: Keyword arguments to be passed to the fullscreen control.
         """        
         fullscreen_control = ipyleaflet.FullScreenControl(position=position, **kwargs)
@@ -330,6 +330,32 @@ class Map(ipyleaflet.Map):
         logo = widgets.HTML(f'<img src="{url}" alt="Logo" width="{width}" height="{height}">')
         control = WidgetControl(widget=logo, position=position)
         self.add_control(control)
+
+
+    def add_toolbar(self, position='topright'):
+        '''adds a toolbar to the map'''
+        from ipyleaflet import WidgetControl
+        padding= '0px 0px 0px 4px'
+        toolbar_button=widgets.ToggleButton(
+            value=False,
+            tooltip='Toolbar',
+            icon='wrench',
+            button_style='primary',
+            layout=widgets.Layout(width='28px', height='28px', padding= padding),
+        )
+        close_button=widgets.ToggleButton(
+            value=False,
+            tooltip='Close',
+            icon='times',
+            button_style='warning',
+            layout=widgets.Layout(width='28px', height='28px', padding= padding),
+        )
+        toolbar = widgets.HBox([toolbar_button, close_button])
+        toolbar_control = WidgetControl(widget=toolbar, position= position)
+        self.add_control(toolbar_control)
+
+
+
 
 
 def generate_random_string(length=10, upper=False, punctuations=False, digits=False):
