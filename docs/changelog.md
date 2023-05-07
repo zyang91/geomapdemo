@@ -1,6 +1,12 @@
 # Changelog
 
-## v0.3.1 -April 29
+## v0.3.2 -May 7, 2023
+**New Features**
+
+-added Toolbar function for geomapdemo module
+
+
+## v0.3.1 -April 29, 2023
 
 **New Features**
 
