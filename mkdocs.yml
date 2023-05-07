@@ -56,8 +56,6 @@ nav:
         - examples/chart.ipynb
         - examples/chart_Example2.ipynb
         - examples/geomapdemo.ipynb
-        - examples/ipyleaflet.ipynb
-        - examples/layer_control.ipynb
         - examples/test-folium.ipynb
         - examples/add_geojson.ipynb
         - examples/add_choropleth_map.ipynb
