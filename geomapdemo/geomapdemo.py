@@ -333,7 +333,12 @@ class Map(ipyleaflet.Map):
 
 
     def add_toolbar(self, position='topright', widget_width='250px'):
-        '''adds a toolbar to the map'''
+        '''adds a toolbar to the map
+        Args:
+            position (str, optional): The position of the toolbar. Defaults to 'topright'.
+            widget_width (str, optional): The width of the toolbar. Defaults to '250px'.
+        '''
+        
         from ipyleaflet import WidgetControl
         padding= '0px 0px 0px 4px'
         
