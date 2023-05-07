@@ -332,10 +332,11 @@ class Map(ipyleaflet.Map):
         self.add_control(control)
 
 
-    def add_toolbar(self, position='topright'):
+    def add_toolbar(self, position='topright', widget_width='250px'):
         '''adds a toolbar to the map'''
         from ipyleaflet import WidgetControl
         padding= '0px 0px 0px 4px'
+        
         toolbar_button=widgets.ToggleButton(
             value=False,
             tooltip='Toolbar',
@@ -343,6 +344,7 @@ class Map(ipyleaflet.Map):
             button_style='primary',
             layout=widgets.Layout(width='28px', height='28px', padding= padding),
         )
+        
         close_button=widgets.ToggleButton(
             value=False,
             tooltip='Close',
@@ -350,8 +352,24 @@ class Map(ipyleaflet.Map):
             button_style='warning',
             layout=widgets.Layout(width='28px', height='28px', padding= padding),
         )
-        toolbar = widgets.HBox([toolbar_button, close_button])
-        toolbar_control = WidgetControl(widget=toolbar, position= position)
+        
+        int_slider = widgets.IntSlider(
+            value= 4,
+            min=1,
+            max=24,
+            description="Zoom level: ",
+            readout=True,
+            continuous_update=True,
+            layout=widgets.Layout(width=widget_width, padding=padding),
+            style={"description_width": "initial"},
+        )
+        widgets.jslink((self, 'zoom'), (int_slider, 'value'))
+        toolbar_widget = widgets.VBox()
+        toolbar_widget.children = [
+            widgets.HBox([close_button, toolbar_button]),
+            int_slider,
+        ]       
+        toolbar_control = WidgetControl(widget=toolbar_widget, position= position)
         self.add_control(toolbar_control)
 
 
