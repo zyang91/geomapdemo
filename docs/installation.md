@@ -5,7 +5,7 @@
 **geomapdemo** is available on [PyPI](https://pypi.org/project/geomapdemo/). To install **geomapdemo**, run this command in your terminal:
 
 ```bash
-pip install geemap
+pip install geomapdemo
 ```
 This is the preferred method to install geomapdemo, as it will always install the most recent stable release.
 
