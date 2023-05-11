@@ -377,6 +377,19 @@ class Map(ipyleaflet.Map):
         toolbar_control = WidgetControl(widget=toolbar_widget, position= position)
         self.add_control(toolbar_control)
 
+    def export(self, filepath='map.html', close_map=True):
+        """Exports the map to an HTML file
+        Args:
+            filepath (str): The output filepath. Defaults to 'map.html'.
+            close_map (bool, optional): Whether to close the map after exporting. Defaults to True.
+        """ 
+        import time
+        from ipywidgets.embed import embed_minimal_html
+        time.sleep(1)
+        embed_minimal_html(fp=filepath, views=[self], title='Map')
+        if close_map:
+            self.close()
+        
 
 
 

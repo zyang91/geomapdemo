@@ -236,4 +236,10 @@ class Map(folium.Map):
             layer (TileLayer): A TileLayer instance.
         """       
         layer.add_to(self)
-        
+
+    def export(self, outfile="map.html"):
+        """Saves the map to a file
+        Args:
+            outfile (str, optional): The output file path to the HTML file. Defaults to "map.html".
+        """        
+        self.save(outfile)   
