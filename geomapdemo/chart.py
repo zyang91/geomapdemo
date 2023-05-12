@@ -148,3 +148,17 @@ def single_count_plot(data, variable, **kwargs):
     else:
         df = data
     sns.countplot(data=df,x=df[variable], **kwargs)
+
+def point_plot(data, x, y, hue= None, **kwargs):
+    '''Plot data and regression model fits across a FacetGrid. Can be used to plot a single variable.(changable to single_point_plot)
+    Args:
+        data (DataFrame): CSV file path or DataFrame object.
+        x, y (str): Variables that specify positions on the x and y axes.
+        hue (str): Variable in data to map plot aspects to different colors.
+        kwargs: Additional keyword arguments are passed to the function used to draw the plot on the joint Axes, superseding items in the joint_kws dictionary.
+    '''
+    if isinstance(data, str):
+        df = pd.read_csv(data)
+    else:
+        df = data
+    sns.pointplot(data=df, x=x, y=y, hue=hue, **kwargs)
