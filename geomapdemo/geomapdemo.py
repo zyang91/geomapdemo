@@ -389,7 +389,29 @@ class Map(ipyleaflet.Map):
         embed_minimal_html(fp=filepath, views=[self], title='Map')
         if close_map:
             self.close()
+    
+    def add_linked_map(self, zoom=4, position= "bottomright"):
+        '''Adds a linked map to the map
+        Args:
+            zoom (int, optional): The zoom level of the linked map. Defaults to 4.
+            position (str, optional): The position of the linked map. Defaults to "bottomright".
+        '''
+
+        from ipyleaflet import WidgetControl
+        minimap =ipyleaflet.Map(
+            zoom_control=False,
+            attribution_control=False, 
+            zoom=zoom,
+            center=self.center,
+            layers=[self.layers[0]]
+        )
+        minimap.layout.width = '150px'
+        minimap.layout.height = '150px'
+        ipyleaflet.link((minimap, 'center'), (self, 'center'))
+        minimap_control = WidgetControl(widget=minimap, position=position)
+        self.add_control(minimap_control)
         
+    
 
 
 
