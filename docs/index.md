@@ -10,11 +10,10 @@
 ![image](https://github.com/zyang91/geomapdemo/workflows/build/badge.svg)
 [![Github Badge](https://img.shields.io/badge/Github-Repo-yellow)](https://github.com/zyang91/geomapdemo)
 
-
 **A python package for interactive mapping.**
 
 ## Logo
-[![logo](logo/logo.jpg)
+![logo](logo/logo.jpg)
 
 
 -   Free software: MIT license
