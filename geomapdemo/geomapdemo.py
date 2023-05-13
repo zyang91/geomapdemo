@@ -412,12 +412,53 @@ class Map(ipyleaflet.Map):
         ipyleaflet.link((minimap, 'center'), (self, 'center'))
         minimap_control = WidgetControl(widget=minimap, position=position)
         self.add_control(minimap_control)
+
+    def add_XY_points_layer(self, data, x, y, **kwargs):
+        '''Adds a XY points layer to the map
+        Args:
+            data (geopandas.GeoDataFrame|CSV): The input geodataframe.
+            x (str): The name of the x column.
+            y (str): The name of the y column.
+            **kwargs: Keyword arguments to be passed to the ipyleaflet.MarkerCluster.
+        '''
+        import geopandas as gpd
+        if isinstance(data, gpd.GeoDataFrame):
+            df = data
+            self.add_gdf(gdf=df)
+        elif isinstance(data, str):
+            import pandas as pd
+            df = pd.read_csv(data)
+
+            # Extract the x and y coordinates from the DataFrame
+            x_values = df[x]
+            y_values = df[y]
+
+            # Create a list of markers based on the coordinates
+            markers = []
+            for x, y in zip(x_values, y_values):
+                mark = ipyleaflet.Marker(location=(y, x))
+                markers.append(mark)
+
+            # Create a marker cluster layer and add it to the map
+            marker_cluster = ipyleaflet.MarkerCluster(markers=markers)
+            self.add_layer(marker_cluster)
+
+        else:
+            raise ValueError('The data must be a geodataframe or a csv file path')
+    
+    def add_gdf(self, gdf):
+        '''Adds a GeoDataFrame to the map
+        Args:
+            data (geopandas.GeoDataFrame): The input geodataframe.
+        '''
+        import geopandas as gpd
+        if isinstance(gdf, gpd.GeoDataFrame):
+            self.add_layer(ipyleaflet.GeoData(geo_dataframe=gdf))
+        else:
+            raise ValueError('The data must be a geodataframe')
         
 
     
-
-
-
 
 def generate_random_string(length=10, upper=False, punctuations=False, digits=False):
     """Generates a random string of fixed length
