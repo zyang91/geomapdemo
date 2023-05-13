@@ -204,6 +204,8 @@ class Map(ipyleaflet.Map):
         scale_control = ipyleaflet.ScaleControl(position = position, **kwargs)
         self.add_control(scale_control)
 
+    
+
     def add_geojson(self, data, name ='GeoJson', **kwargs):
         """Adds a geojson to the map
         Args:
@@ -411,6 +413,7 @@ class Map(ipyleaflet.Map):
         minimap_control = WidgetControl(widget=minimap, position=position)
         self.add_control(minimap_control)
         
+
     
 
 
