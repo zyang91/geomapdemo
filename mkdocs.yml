@@ -44,6 +44,7 @@ markdown_extensions:
 nav:
     - Home: index.md
     - Code of conduct: code_of_conduct.md
+    - Statement of need: Statement_of_need.md
     - Installation: installation.md
     - Usage: usage.md
     - Contributing: contributing.md
