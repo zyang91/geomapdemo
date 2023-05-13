@@ -13,6 +13,10 @@
 **A python package for interactive mapping.**
 
 
+## Logo
+
+[![Logo](docs/logo/logo.jpg)
+
 - Free software: MIT license
 - Documentation: https://zyang91.github.io/geomapdemo
     
