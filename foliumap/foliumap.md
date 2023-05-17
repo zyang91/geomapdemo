@@ -1,0 +1,3 @@
+# foliumap module
+
+::: geomapdemo.foliumap
