@@ -39,4 +39,3 @@
 - Python 3.10
 - Python 3.11
 
-_note: Since developer in vacation, developing stopped for a month._
