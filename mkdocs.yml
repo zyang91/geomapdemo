@@ -60,6 +60,6 @@ nav:
         - examples/add_geojson.ipynb
         - examples/add_choropleth_map.ipynb
     - API Reference:
-          - geomapdemo module: geomapdemo.md
+          - geomapdemo module:
           - foliumap module: foliumap.md
           - chart module: chart.md
