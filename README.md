@@ -9,7 +9,7 @@
 ![image](https://github.com/zyang91/geomapdemo/workflows/build/badge.svg)
 [![Github Badge](https://img.shields.io/badge/Github-Repo-yellow)](https://github.com/zyang91/geomapdemo)
 
-**A python package for interactive mapping.**
+**A Python package for interactive mapping.**
 
 
 ## Logo
@@ -24,10 +24,10 @@
 
 -   Create random numbers and random text
 -   Basic Mapping and drawing
--   Vector and raster layer function available
--   Ipyleaflet based interactive map function
--   Folium based interactive map function
--   Chart module for interactive chart making
+-   Vector and raster layer functions available
+-   Ipyleaflet-based interactive map function
+-   Folium-based interactive map function
+-   Chart module for interactive chart-making
 
 
 ## Supported Python Version
