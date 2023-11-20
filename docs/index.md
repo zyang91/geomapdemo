@@ -10,13 +10,13 @@
 ![image](https://github.com/zyang91/geomapdemo/workflows/build/badge.svg)
 [![Github Badge](https://img.shields.io/badge/Github-Repo-yellow)](https://github.com/zyang91/geomapdemo)
 
-**A python package for interactive mapping.**
+**A Python package for interactive mapping.**
 
 ## Logo
 ![logo](logo/logo.jpg)
 
 
--   Free software: MIT license
+- Free software: MIT license
 - Documentation: https://zyang91.github.io/geomapdemo
     
 
@@ -24,9 +24,9 @@
 
 -   Create random numbers and random text
 -   Basic Mapping feature (control function)
--   Ipyleaflet based interactive map function
+-   Ipyleaflet-based interactive map function
 -   Added layers and basemap to interactive map
--   Added httpx and local raster layer function
--   Folium based interactive map function
+-   Added HTTPS and local raster layer function
+-   Folium-based interactive map function
 
 
