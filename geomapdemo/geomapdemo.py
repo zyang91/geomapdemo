@@ -456,6 +456,15 @@ class Map(ipyleaflet.Map):
             self.add_layer(ipyleaflet.GeoData(geo_dataframe=gdf))
         else:
             raise ValueError('The data must be a geodataframe')
+    def add_vector(self, filepath, **kwargs):
+        '''Adds a vector file to the map
+        Args:
+            filepath (str): The path to the vector file.
+            **kwargs: Keyword arguments to be passed to the ipyleaflet.GeoData.
+        '''
+        import geopandas as gpd
+        gdf = gpd.read_file(filepath)
+        self.add_gdf(gdf=gdf, **kwargs)
         
 
     
