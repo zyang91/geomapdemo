@@ -26,4 +26,4 @@ Answer: If the interactive map does not show up on Jupyter Notebook and JupyterL
 Answer: Unfortunately, tutorial videos are currently unavailable. Examples are available on documentation website under the examples tab
 
 ## More questions?
-Feel free to discuss in the discussion section or send me an email at zyang91@binghamton.edu or zhanchaoyang69@gmail.com
+Feel free to discuss in the discussion section or send me an email  zhanchaoyang69@gmail.com
