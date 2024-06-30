@@ -26,7 +26,7 @@ plugins:
         #   ignore_h1_titles: True
         #   execute: True
         #   execute_ignore: "*.ipynb"
-          
+
 markdown_extensions:
     - attr_list
     - pymdownx.superfences
