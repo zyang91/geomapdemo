@@ -37,4 +37,5 @@
 - Python 3.9
 - Python 3.10
 - Python 3.11
+- Python 3.12
 
