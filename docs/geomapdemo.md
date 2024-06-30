@@ -1,4 +1,4 @@
- 
+
 # geomapdemo module
 
 ::: geomapdemo.geomapdemo
