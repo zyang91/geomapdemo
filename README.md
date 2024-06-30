@@ -23,7 +23,6 @@
 ## Features
 
 -   Create random numbers and random text
--   Basic Mapping and drawing
 -   Vector and raster layer functions available
 -   Ipyleaflet-based interactive map function
 -   Folium-based interactive map function
