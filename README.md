@@ -16,7 +16,7 @@
 
 ![Logo](docs/logo/logo.jpg)
 
-- Free software: MIT license jj
+- Free software: MIT license
 - Documentation: https://zyang91.github.io/geomapdemo
 
 
