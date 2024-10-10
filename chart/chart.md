@@ -1,0 +1,3 @@
+# Chart module
+
+::: geomapdemo.chart

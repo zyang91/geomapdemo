@@ -1,0 +1,3 @@
+# Statement of Need
+
+geomapdemo is a Python package for interactive mapping. It is designed to be a simple and easy-to-use mapping package and a teaching tool for students to learn about mapping and Python. Chart plotting is one of the key elements to do spatial analysis. Currently, most of the Python interactive mapping packages, such as ```ipyleaflet```, ```folium``` does not support chart making. This package is designed to fill this gap. Users don't need to download commonly used plotting packages such as ```matplotlib```, ```seaborn``` to make charts. This package is designed to be a one-stop shop for mapping and chart plotting.
