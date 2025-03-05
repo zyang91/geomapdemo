@@ -1,4 +1,4 @@
-# geomapdemo
+# Geomapdemo
 
 [![Software License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Downloads](https://static.pepy.tech/badge/geomapdemo)](https://pepy.tech/project/geomapdemo)
