@@ -27,6 +27,7 @@
 -   Ipyleaflet-based interactive map function
 -   Folium-based interactive map function
 -   Chart module for interactive chart-making
+-   More update will came in summer 2025
 
 
 ## Supported Python Version
